@@ -33,32 +33,47 @@
             margin: 5px;
         }
 
-
         .container {
-            display: flex;
-            flex-wrap: wrap;
-            margin-top: 70px;
-            margin-left: 1%;
-            margin-right: 1%;
-            overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 70px;
+    margin-left: 1%;
+    margin-right: 1%;
+    overflow: hidden;
+}
 
-        }
+.mepic {
+    background-color: var(--color3);
+    max-width: 500px;
+    overflow: hidden;
+    /* Hide overflow */
+}
 
-        .mepic {
+.mepic img {
+    width: 100%;
+    height: auto;
+}
 
-            background-color: var(--color3);
-            width: 100%;
-            max-width: 600px;
-            /* Adjust this value to your preference */
-            overflow: hidden;
-            /* Hide overflow */
-        }
+/* New CSS code */
+/* Existing CSS */
 
+@media (min-width: 768px) {
+    .container {
+        justify-content: space-between;
+    }
 
-        .mepic img {
-            width: 100%;
-            height: auto;
-        }
+    .mepic {
+        flex-grow: 1;
+        max-width: 40%; /* Adjust the value as per your preference */
+    }
+
+    .mepic img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+ 
 
         .maintext,
         .contact,
@@ -81,7 +96,6 @@
             margin-left: 20px;
         }
 
-
         img {
             transform: translateY(10%);
             filter: grayscale(100%);
@@ -96,27 +110,31 @@
             scale: 120%;
         }
 
-
-        @media (max-width: 350) {
+        @media (max-width: 768px) {
             .container {
                 flex-direction: column;
                 margin-left: 1%;
-                /* Add this line to maintain 1% margin on small screens */
                 margin-right: 1%;
-                /* Add this line to maintain 1% margin on small screens */
             }
 
-            .mepic,
+            .mepic {
+                width: 100%;
+                max-width: none;
+                /* Remove the max-width constraint */
+            }
+
             .maintext,
             .contact,
             .traits-container {
                 width: 100%;
                 margin-left: 0;
-                /* Remove the left margin on small screens */
                 margin-right: 0;
-                /* Remove the right margin on small screens */
             }
         }
+
+
+
+
 
         p,
         li {
@@ -182,13 +200,13 @@
                 valmis pühenduma Linuxi serverite teenuste püstitamisele ning
                 vajadusel olen valmis selleks lisaks õppima.
             </p>
-            <br>
+            <br />
             <a href="./src/pdf/CV 10.09.2022 - Efe Marko Güldere.pdf" id="cv"><i class="fa-solid fa-id-card"></i> CV</a>
         </div>
 
         <div class="contact">
             <h2>Kontakt informatsioon</h2>
-            <p style="width: 100%;">
+            <p style="width: 100%">
                 <i class="fa-solid fa-phone" style="
               background-color: var(--color4);
               padding: 10px;
@@ -202,7 +220,8 @@
               padding: 10px;
               border-radius: 15px;
               color: var(--textcontrast);
-            "></i>&nbsp;&nbsp; <span style="  white-space: nowrap;">efe.marko.guldere@rak.ee</span>
+            "></i>&nbsp;&nbsp;
+                <span style="white-space: nowrap">efe.marko.guldere@rak.ee</span>
             </p>
             <p>
                 <i class="fa-solid fa-location-dot" style="
@@ -217,9 +236,8 @@
 
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32548.662126265514!2d26.320370319804734!3d59.34478376611185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469375d2d183e92b%3A0x400b36d18fc6760!2sRakvere%2C%20L%C3%A4%C3%A4ne-Viru%20County!5e0!3m2!1sen!2see!4v1696938004395!5m2!1sen!2see"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
-
         </div>
         <div class="traits-container">
             <h2>Isikuomadused</h2>
