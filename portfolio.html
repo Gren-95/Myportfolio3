@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="et">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./navbar.css">
+    <link rel="stylesheet" href="./colors.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <title>Portfell</title>
+    <style>
+
+        button {
+            border: solid 2px var(--color2);
+            padding: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 15px;
+            margin-bottom: 5px;
+            color: var(--textcontrast);
+            background-color: var(--text);
+            font-size: 12pt;
+        }
+
+        button:active {
+            background-color: #666;
+            color: white;
+        }
+
+        body {
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+                sans-serif;
+            background-color: var(--color4);
+        }
+
+        .item {
+            float: left;
+            border-radius: 15px;
+            background-color: var(--color2);
+            width: 550px;
+            /* Change this value to whatever fixed width you prefer */
+            padding: 10px;
+            margin: 5px;
+        }
+
+
+        .powershell {
+            height: 600px;
+        }
+
+        .bash,
+        .markdown,
+        .python {
+            height: 700px;
+        }
+
+        .html {
+            height: 500px;
+        }
+
+        .võrguseadmed {
+            height: 900px;
+        }
+
+        .container {
+            margin-top: 70px;
+            margin-left: 1%;
+            margin-right: 1%;
+        }
+
+
+
+        img {
+            margin-top: 10px;
+            max-width: 93%;
+            max-height: 100%;
+            border-radius: 15px;
+        }
+
+
+        p {
+            max-width: 500px;
+            font-size: 16pt;
+        }
+
+        h1,
+        h2,
+        h3,
+        p,
+        img {
+            margin-left: 20px;
+            color: var(--text);
+
+        }
+
+        @media (max-width: 350px) {
+            .container {
+                margin-left: 1%;
+                margin-right: 1%;
+            }
+
+            .item {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+
+        #filter-buttons {
+            margin-top: 80px;
+        }
+
+        #gallery {
+            margin-top: 20px;
+        }
+
+        a:link,
+        a:visited {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 800;
+            font-size: 16pt;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="./about.html">Minust</a>
+        <a href="./resume.html">Rezümee</a>
+        <a href="./portfolio.html">Portfell</a>
+    </div>
+    <div class="container">
+        <div class="filterbg">
+            <div id="filter-buttons">
+                <button data-filter="kõik"> <i class="fa-solid fa-border-all"></i> Kõik</button>
+                <button data-filter="powershell"> <i class="fa-solid fa-shrimp"></i> Powershell</button>
+                <button data-filter="markdown"> <i class="fa-brands fa-markdown"></i> Markdown</button>
+                <button data-filter="python"> <i class="fa-brands fa-python"></i> Python</button>
+                <button data-filter="bash"> <i class="fa-solid fa-terminal"></i> Bash</button>
+                <button data-filter="html"> <i class="fa-brands fa-html5"></i> HTML/CSS</button>
+                <button data-filter="võrguseadmed"> <i class="fa-solid fa-network-wired"></i> Võrguseadmed</button>
+                <button data-filter="3d"> <i class="fa-solid fa-cube"></i> 3D mudelid</button>
+            </div>
+        </div>
+        <div id="gallery">
+            <div class="item powershell">
+                <img src="./src/images/programming/powershell/powershell toolbox.png">
+                <h1>Efe Toolbox</h1>
+                <p>
+                    See oli üks minu olulisemaid PowerShell projekte, mille ma lõin pärast ühe kursuse läbimist
+                    suvevaheajal.
+                </p>
+            </div>
+
+            <div class="item powershell">
+                <img src="./src/images/programming/powershell/powershell shutdown.png">
+                <h1>Shutdown script</h1>
+                <p>
+                    See oli minu esimene katse luua programm PowerShell Forms abil. Tegin seda kergemeelselt, kuna
+                    koolis avastasime klassiga ühe cmd käsu, mis võimaldas sulgeda samas võrgus olevaid arvuteid.
+                </p>
+            </div>
+
+            <div class="item powershell">
+                <img src="./src/images/programming/powershell/powershell school sample.png">
+                <h1>School Sample</h1>
+                <p>
+                    See oli minu näide õpetajale, et tulevikus ei peaks ta võtma nii kaua aega mõne erielemendi
+                    lisamiseks järgmistel kursuste õpetamistel.
+                </p>
+            </div>
+            <div class="item markdown">
+                <img src="./src/images/programming/markdown/markdown skeem.png">
+                <h1>Markdown homework</h1>
+                <p>
+                    See oli minu kodutöö, mille otsustasin koostada Markdowni märgistuskeeles. Minu arvates ei olnud MS
+                    Word hea valik koodi ja konfiguratsioonifailide esitamiseks.
+                </p>
+            </div>
+            <div class="item python">
+                <img src="./src/images/programming/python/python file converter.png" width="100%">
+                <h1>Simple batch file converter</h1>
+                <p>
+                    See oli minu esimene katse luua Pythoni programm, mille ma tegin pärast esimese kursuse läbimist
+                    vaheajal. </p>
+            </div>
+            <div class="item bash">
+                <img src="./src/images/programming/bash/bash dnf autosnap.png">
+                <h1>DNF autosnap</h1>
+                <p>
+                    See on üks minu igapäevaselt kasutatavatest Bash skriptidest, mida kasutan enda arvuti töökorras
+                    hoidmiseks. Timeshift programmi abil teen täieliku ketta varukoopia ja seejärel uuendan masina
+                    paketid.
+                </p>
+            </div>
+            <div class="item html">
+                <img src="./src/images/programming/html/portfolio1.png">
+                <h1>Portfolio 1</h1>
+                <p>
+                    See oli minu teine portfell, mille otsustasin luua kasutades HTML-i ja CSS-i. Selle aluseks võtsin
+                    teise toimiva portfelli ning majutan seda GitHub Pages teenuse abil.
+                </p>
+            </div>
+            <div class="item html">
+                <img src="./src/images/programming/html/portfolio2.png">
+                <h1>Portfolio 2</h1>
+                <p>
+                    See oli minu kolmas portfell, mille ma samuti ümber kujundasin.
+                </p>
+            </div>
+            <div class="item html">
+                <img src="./src/images/programming/html/portfolio3.png">
+                <h1>Portfolio 3</h1>
+                <p>
+                    See oli minu neljas portfell, mille lõin täiesti nullist ise
+                </p>
+            </div>
+            <div class="item võrguseadmed">
+                <img src="./src/images/ip devices/config ip cam.jpg">
+                <h1>IP camera config</h1>
+                <p>
+                    Siin on IP-kaamera, mille seadistamise õppisin Ametikoolis
+                </p>
+            </div>
+            <div class="item võrguseadmed">
+                <img src="./src/images/ip devices/config ruckus ap.jpg">
+                <h1>AP config</h1>
+                <p>
+                    Siin on üks mitmest juurdepääsupunktist (AP), mille seadistamise õppisin Ametikoolis.
+                </p>
+            </div>
+            <div class="item võrguseadmed">
+                <img src="./src/images/ip devices/config switch rack.jpg">
+                <h1>Switch config</h1>
+                <p>
+                    Siin on switch'i kapp, milles on mitu switch'i ja muud seadet, mille seadistamise õppisin
+                    Ametikoolis. </p>
+            </div>
+            <div class="item võrguseadmed">
+                <img src="./src/images/ip devices/config tv.jpg">
+                <h1>Mounting TV</h1>
+                <p>
+                    Siin on ühe klassiruumi multimeediaseade, mis koosneb neljast erinevast ekraanist. Samal ajal kui
+                    teised õpilased lõpetasid ülesannet tunnis, aitasin mina õpetajat nende paigaldamisel.
+                </p>
+            </div>
+            <div class="item 3d" style="height: 900px">
+                <img src="./src/images/3d/3d cube.png">
+                <h1>Cube</h1>
+                <p>
+                    Esimese poole esimesest tunnist tegin valmis 3D mudeli navigeerimise kuubist. Esialgu arvasin, et
+                    selle keskkonna kaamera/vaate liigutamine oli suhteliselt keeruline manööverdada, kuna see oli
+                    harjumatu. Üllatusin , et see osutus oodatust lihtsamaks. Hea oli selles tunnis see, et oli olemas
+                    näidis vasakul üleval ekraani nurgas. Selle tunni mõte oli õppida kuidas lisada teksti ja kuidas 3D
+                    mudelid üksteisega käituvad. Oleks saanud veel õppida lisaks, kuidas navigeerida Tinkercad
+                    keskkonnas. Kui situatsioon kordub, teeksin seda tööd kiiremini ja parema kvaliteediga.
+                </p>
+            </div>
+            <div class="item 3d" style="height: 900px">
+                <img src="./src/images/3d/3d lego.png">
+                <h1>Lego 2x4 punane klots</h1>
+                <p>
+                    Teise poole esimesest tunnis tegin valmis 3D mudeli Lego 2x4 punasest klotsist ning õppisin kasutama
+                    Tinkercad keskkonda. Arvasin, et mudeli tegemine oli üsna tüütu, kuna sellel oli palju erineva
+                    suurusega kujundeid. Hea oli selles tunnis see, et oli olemas skeem, millelt sai mõõdud võtta. Selle
+                    tunni mõte oli õppida kuidas üldiselt sarnased programmid toimivad. Oleks saanud veel õppida, kuidas
+                    kasutada Tinkercad keskkonda. Kui situatsioon kordub, teeksin seda tööd kiiremini.
+                </p>
+            </div>
+            <div class="item 3d" style="height: 900px">
+                <img src="./src/images/3d/3d stool.png">
+                <h1> Taburett </h1>
+                <p>
+                    Kolmandas tunnis modelleerisin tabureti ning seekord kasutasin modelleerimiseks Sketchup keskkonda.
+                    Sketchup keskkonnas on modeleerimine veidi keerulisem kui Tinkercadis, kuna seal on navigeerimine
+                    teistmoodi. Hea oli see, et kui ma harjusin kuidas seda natuke kasutama, hakkas minu töö kiiremini
+                    valmima. Selle tunni mõte oli kasutada uut rakendust ning õppida selle eripärasid võrreldes
+                    Tinkercadiga. Oleks võinud selles keskkonnas rohkem tööriistu õppida ning kuidas neid kasutada
+                    praktiliselt. Kui situatsioon korduks, teeksin tööd kiiremini.
+                </p>
+            </div>
+            <div class="item 3d" style="height: 900px">
+                <img src="./src/images/3d/3d bench.png">
+                <h1>Pink</h1>
+                <p>
+                    Teise poole kolmandast tunnist tegin lisaülesandena modernse pingi. Selles töös tundsin, et sain töö
+                    tehtud täiuslikult. Mind häiris see, et Sketchup tegi vahepeal imelikke otsuseid ja ei joondanud
+                    asju automaatselt. Selle situatsiooni mõte oli see, et õpliastel kellel oli eelmine töö tehtud,
+                    saaks enda aega sisustada Sketchup programmi kasutamisega. Oleks saanud lisada veel mõned osad, et
+                    see mudel oleks realistlikum. Kui peaksin seda tööd uuesti tegema, siis kasutaksin paremat hiirt, et
+                    navigeerida kiiremini ja paremini.
+                </p>
+            </div>
+            <div class="item 3d" style="height: 900px">
+                <img src="./src/images/3d/3d castle.png">
+                <h1>Loss</h1>
+                <p>
+                    Neljandas tunnis hakkasin tegema lossi, millel olid värav, seinad, kaitsekraav ja vibutorn. Tundsin,
+                    et selle lossi tegemine oleks olnud ilma näidiseta raske, kuid sain hakkama. Jätkuvalt pole ma
+                    harjunud kaamera/vaate liigutamisega, kuna selle jaoks pean kasutama ainult hiirt või puuteplaati,
+                    mitte WASD või nooleklahve. Selle situatsiooni mõte oli midagi suurt teha ja sellest animatsioon
+                    teha. Oleks saanud kõike korralikumalt ja ühtlasemalt teha. Kui alustaksin uuesti, siis oleks töö
+                    kvaliteetsem ja läbimõeldum.
+                    <br><br>
+                    <a href="https://drive.google.com/file/d/1jqUVDDhDs8jPSaB7c1Z6SDdsghkpF9Nn/view?pli=1">Video</a>
+                </p>
+            </div>
+            <div class="item 3d" style="height: 1000px">
+                <img src="./src/images/3d/3d snowflake.png">
+                <h1>Lumehelbed</h1>
+                <p>
+                    Viiendas tunnis tegin 4 erinevat lumehelvest komponentse tööriista abiga. Alguses ei saanud ma aru,
+                    kuidas joondada lumehelbeid korralikult, kuid peale katsetamist taipasin, kuidas neid teha kiirelt
+                    ja efektiivselt. Seekord oli asi lihtne, kuna kõik, mis tegin oli 2D. Selle tunni mõte oli näidata,
+                    kuidas component- tööriista saab kasutada. Oleks võinud pöörata enam tähelepanu disainile. Kui
+                    tuleks veel lumehelbeid teha, siis uuriksin internetist erinevaid disaine, mille järgi ideid
+                    eelnevalt koguda ja teha enda töö paremaks.
+                </p>
+            </div>
+            <div class="item 3d" style="height: 1000px">
+                <img src="./src/images/3d/3d house.png">
+                <h1>Maja</h1>
+                <p>
+                    Kuuendast kuni kaheksanda tunnini tegin valmis ühekorruselise maja. Mööbli lisamisel poleks arvanud,
+                    et Sketchup veebirakendus hakkiks nii palju, et poleks võimalik korralikult liigutada ning
+                    sellepärast võtsin kasutusele Sketchup Pro rakenduse. Selle töö käigus sain aru, et sketchup võib
+                    teha suvalisi ühendusi ning eemaldada paari seina ning põrandat. Seda ülesannet tehes tegin kaks
+                    maja, kuid esimest maja ei lõpetanud, kuna see oli päris kehvasti tehtud. Selle situatsooni mõte oli
+                    see, et teha suurem projekt joonise ja piltide järgi. Oleks saanud Esimiese maja valmis teha, mis
+                    oleks olnud kahe korruseline. Kui situatsioon kordub teeksin üks korrus korraga ning sisustaks maja
+                    enne kui teise korrusega alustaksin.
+                </p>
+            </div>
+            <div class="item 3d" style="height: 1000px">
+                <img src="./src/images/3d/3d tank.png">
+                <h1>Renault FT-17</h1>
+                <p>
+                    Kahe nädalavahetusega tegin valmis prantsuse Renault FT-17 tangi. Seda tööd tehes ma ei järginud töö
+                    juhendit nii täpselt, kuna ma ei kasuta Windows kümmet ning arvasin, et selle asemel oleks mul parem
+                    leida programm, mida ma tulevikus võiksin isegi kasutada ma tulevikus võiksin isegi kasutada vabal
+                    ajal ilma litsensi tasuta. Blender programmi õppimise ajal poleks arvanud, et ma oleks asjad nii
+                    kiiresti tava kasutaja tasemel selgeks õppinud. Ma poleks arvanud, et enamus blender kiirklahvide
+                    meelde jätmine oleks nii lihtne. Suureks ajakuluks oli aga keerukas uus kasutaja liides mulle.
+                    Situatsooni mõte oli see, et praktika ajal oleks meil midagi muud teha vabal ajal. Oleks saanud
+                    veelgi detailsemalt tangi teha või isegi detailsem tekstuur lisada. Kui saaksin seda uuesti teha,
+                    teeksin kõik kiiremini.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const filterButtons = document.querySelectorAll('#filter-buttons button');
+        const galleryItems = document.querySelectorAll('#gallery .item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const category = this.dataset.filter;
+
+                galleryItems.forEach(item => {
+                    if (category === 'kõik' || item.classList.contains(category)) {
+                        item.style.display = 'inline-block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    });
+
+</script>
+
+</html>

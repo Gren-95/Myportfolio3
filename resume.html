@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="et">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./navbar.css">
+    <link rel="stylesheet" href="./colors.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <title>Rezümee</title>
+    <style>
+        button {
+            border: solid 2px var(--color2);
+            padding: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 15px;
+            margin-bottom: 5px;
+            color: var(--textcontrast);
+            background-color: var(--text);
+        }
+
+        button:active {
+            background-color: #666;
+            color: white;
+        }
+
+        body {
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+                sans-serif;
+            background-color: var(--color4);
+        }
+
+        .haridus,
+        .oskused,
+        .kogemused {
+            float: left;
+            border-radius: 15px;
+            background-color: var(--color2);
+            width: 550px;
+            /* Change this value to whatever fixed width you prefer */
+            padding: 10px;
+            margin: 5px;
+        }
+
+
+        .container {
+            margin-top: 70px;
+            margin-left: 1%;
+            margin-right: 1%;
+        }
+
+
+
+        img {
+            margin-top: 10px;
+            max-width: 93%;
+            max-height: 100%;
+            border-radius: 15px;
+        }
+
+
+        p {
+            max-width: 500px;
+            font-size: 16pt;
+        }
+
+        h1,
+        h2,
+        h3,
+        p,
+        img,
+        li {
+            margin-left: 20px;
+            color: var(--text);
+
+        }
+
+        .haridus,
+        .kogemused {
+            height: 1200px;
+        }
+
+        @media (max-width: 350px) {
+            .container {
+                margin-left: 1%;
+                margin-right: 1%;
+            }
+
+            .item {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+
+        #filter-buttons {
+            margin-top: 80px;
+        }
+
+        #gallery {
+            margin-top: 20px;
+        }
+
+        a:link,
+        a:visited {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 800;
+            font-size: 16pt;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="./index.html">Minust</a>
+        <a href="./resume.html">Rezümee</a>
+        <a href="./portfolio.html">Portfell</a>
+    </div>
+    <div class="container">
+
+        <div class="haridus">
+            <h1>Haridus</h1>
+
+            <div class="kool1">
+
+                <h2>Rakvere Põhikool</h2>
+                <h3 style="
+                background-color: var(--color4);
+                border-radius: 15px;
+                padding: 5px;
+                text-align: center;
+                width: 200px;
+                font-size: 14px;
+                font-weight: 600;
+                color: var(--textcontrast);
+              "> <i class="fa-solid fa-calendar-days"></i>&nbsp; 2012 - 2021</h3>
+                <img src="./src/images/schools/Põhikool.JPG" width="80%">
+                <p>
+                    Selles koolis mul oli veidi raskusi õppimisega,
+                    kuid ma pingutasin ja paranesin
+                    olukorra jooksul.
+                </p>
+            </div>
+            <div class="kool2">
+                <h2>Rakvere Ametikool</h2>
+                <h3 style="
+                background-color: var(--color4);
+                border-radius: 15px;
+                padding: 5px;
+                text-align: center;
+                width: 200px;
+                font-size: 14px;
+                font-weight: 600;
+                color: var(--textcontrast);
+              "><i class="fa-solid fa-calendar-days"></i>&nbsp; 2021 - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </h3>
+                <img src="./src/images/schools/ametikool.jpg" width="80%">
+
+                <p>
+                    Selles koolis saavutasin suurepäraseid tulemusi.
+                    Olin IT-alal kaasõpilastest märkimisväärselt edukam,
+                    demonstreerides tugevaid oskusi ja pühendumust.
+                </p>
+            </div>
+        </div>
+        <div class="kogemused" style="margin-bottom: 0px;">
+            <h1>Kogemused</h1>
+            <div class="kogemus1">
+                <h2>Jeld-Wen Eesti AS</h2>
+                <h3 style="
+                background-color: var(--color4);
+                border-radius: 15px;
+                padding: 5px;
+                text-align: center;
+                width: 200px;
+                font-size: 14px;
+                font-weight: 600;
+                color: var(--textcontrast);
+              "><i class="fa-solid fa-calendar-days"></i>&nbsp; 2023 — 2023 (Kevad)</h3>
+                <img src="./src/images/kogemused/komp3.bmp" width="80%">
+
+                <p>
+                    Olin esimese praktika ajal Jeld-Wen Eesti AS IT-osakonnas kolm kuud. Peamine fookus oli töötajate
+                    IT-probleemide lahendamisel. Lisaks hooldasin ja sorteerisin veidi sülearvuteid ning IT-laoseisu.
+                    Tulin nende ülesannetega väga hästi toime.
+                </p>
+            </div>
+            <div class="kogemus2">
+                <h2>Jeld-Wen Eesti AS</h2>
+                <h3 style="
+                background-color: var(--color4);
+                border-radius: 15px;
+                padding: 5px;
+                text-align: center;
+                width: 200px;
+                font-size: 14px;
+                font-weight: 600;
+                color: var(--textcontrast);
+              "><i class="fa-solid fa-calendar-days"></i>&nbsp; 2023 — 2023 (Suvi)</h3>
+                <img src="./src/images/kogemused/komp2.bmp" width="80%">
+
+                <p>
+                    Jeld-Wen Eesti AS-i IT-osakonnas praktiseerisin kolm kuud. Minu põhilised ülesanded olid töötajate
+                    IT-probleemide lahendamine ja tööstusarvutite hooldus. Tulin nendega hästi toime.
+                </p>
+            </div>
+        </div>
+        <div class="oskused">
+            <h1>Oskused</h1>
+            <div class="oskused1">
+                <h2 style="
+                background-color: var(--color4);
+                border-radius: 15px;
+                padding: 5px;
+                text-align: center;
+                width: 200px;
+                font-size: 14px;
+                font-weight: 600;
+                color: var(--textcontrast);
+              "><i class="fa-solid fa-server"></i>&nbsp; Riistvara</h2>
+                <ul>
+                    <li>Ethernet rj45 kaablite termineerimine </li>
+                    <li>Arvutite riistvara probleemide diagnoosimine</li>
+                    <li>Sülearvuti lahtivõtt ja kokkupanek</li>
+                    <li>Lauaarvuti komplekteerimine ja kokkupanek</li>
+                    <li>Kaablite haldamine</li>
+                    <li>Termopasta vahetus</li>
+                </ul>
+            </div>
+            <div class="oskused2">
+                <h2 style="
+                background-color: var(--color4);
+                border-radius: 15px;
+                padding: 5px;
+                text-align: center;
+                width: 200px;
+                font-size: 14px;
+                font-weight: 600;
+                color: var(--textcontrast);
+              "><i class="fa-solid fa-diagram-project"></i>&nbsp; Tarkvara</h2>
+
+                <ul>
+                    <li>MS Office kasutamine</li>
+                    <li>Windows, Linux, MacOS käsuliidese kasutamine</li>
+                    <li>Hyper-V, Virt-manager ja Virtualbox kasutamine</li>
+                    <li>OBS-Studio kasutamine</li>
+                    <li>Windows, Linux, Mac OS kasutamine</li>
+                    <li>AP sätestamine</li>
+                    <li>Wireless access point sätestamine</li>
+                    <li>VS Code kasutamine</li>
+
+                </ul>
+            </div>
+            <div class="oskused3">
+                <h2 style="
+                background-color: var(--color4);
+                border-radius: 15px;
+                padding: 5px;
+                text-align: center;
+                width: 200px;
+                font-size: 14px;
+                font-weight: 600;
+                color: var(--textcontrast);
+              "><i class="fa-solid fa-code"></i>&nbsp; Arendus</h2>
+
+                <ul>
+                    <li>HTML/CSS</li>
+                    <li>Python</li>
+                    <li>Bash</li>
+                    <li>Powershell</li>
+                    <li>Powershell From</li>
+
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
