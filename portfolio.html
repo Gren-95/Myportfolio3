@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <title>Portfell</title>
     <style>
-
         button {
             border: solid 2px var(--color2);
             padding: 5px;
@@ -27,60 +26,10 @@
             color: white;
         }
 
-        body {
-            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-                sans-serif;
-            background-color: var(--color4);
-        }
-
-        .item {
-            float: left;
-            border-radius: 15px;
-            background-color: var(--color2);
-            width: 550px;
-            /* Change this value to whatever fixed width you prefer */
-            padding: 10px;
-            margin: 5px;
-        }
-
-
-        .powershell {
-            height: 600px;
-        }
-
-        .bash,
-        .markdown,
-        .python {
-            height: 700px;
-        }
-
-        .html {
-            height: 500px;
-        }
-
-        .võrguseadmed {
-            height: 900px;
-        }
-
-        .container {
-            margin-top: 70px;
-            margin-left: 1%;
-            margin-right: 1%;
-        }
-
-
-
         img {
             margin-top: 10px;
-            max-width: 93%;
-            max-height: 100%;
+            width: 50%;
             border-radius: 15px;
-        }
-
-
-        p {
-            max-width: 500px;
-            font-size: 16pt;
         }
 
         h1,
@@ -90,30 +39,101 @@
         img {
             margin-left: 20px;
             color: var(--text);
-
-        }
-
-        @media (max-width: 350px) {
-            .container {
-                margin-left: 1%;
-                margin-right: 1%;
-            }
-
-            .item {
-                width: 100%;
-                margin-left: 0;
-                margin-right: 0;
-            }
         }
 
         #filter-buttons {
             margin-top: 80px;
         }
 
-        #gallery {
-            margin-top: 20px;
+        .powershell,
+        .markdown {
+            height: 450px;
         }
 
+        .python,
+        .bash {
+            height: 500px;
+        }
+
+        .html {
+            height: 450px;
+        }
+
+        .mudel {
+            height: 700px;
+        }
+
+        .võrguseadmed {
+            height: 600px;
+        }
+
+        button {
+            border: solid 2px var(--color2);
+            padding: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 15px;
+            margin-bottom: 5px;
+            color: var(--textcontrast);
+            background-color: var(--text);
+        }
+
+        button:active {
+            background-color: #666;
+            color: white;
+        }
+
+        body {
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+            background-color: var(--color4);
+        }
+
+        .item {
+            float: left;
+            border-radius: 15px;
+            background-color: var(--color2);
+            /* Change this value to whatever fixed width you prefer */
+            padding: 10px;
+            margin: 5px;
+            width: 47%;
+        }
+
+        img {
+            float: ri;
+        }
+
+        .container {
+            display: flex;
+            margin-top: 70px;
+            margin-left: 1%;
+            margin-right: 1%;
+        }
+
+        p {
+            font-size: 16pt;
+            margin-left: 20px;
+        }
+
+        h1,
+        h2,
+        h3,
+        p,
+        img,
+        li {
+            margin-left: 20px;
+            color: var(--text);
+        }
+
+        @media screen and (max-width: 1100px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .item {
+                width: 93%;
+                height: auto;
+            }
+        }
     </style>
 </head>
 
@@ -123,19 +143,17 @@
         <a href="./resume.html">Rezümee</a>
         <a href="./portfolio.html">Portfell</a>
     </div>
+    <div id="filter-buttons">
+        <button data-filter="kõik"> <i class="fa-solid fa-border-all"></i> Kõik</button>
+        <button data-filter="powershell"> <i class="fa-solid fa-shrimp"></i> Powershell</button>
+        <button data-filter="markdown"> <i class="fa-brands fa-markdown"></i> Markdown</button>
+        <button data-filter="python"> <i class="fa-brands fa-python"></i> Python</button>
+        <button data-filter="bash"> <i class="fa-solid fa-terminal"></i> Bash</button>
+        <button data-filter="html"> <i class="fa-brands fa-html5"></i> HTML/CSS</button>
+        <button data-filter="võrguseadmed"> <i class="fa-solid fa-network-wired"></i> Võrguseadmed</button>
+        <button data-filter="mudel"> <i class="fa-solid fa-cube"></i> 3D mudelid</button>
+    </div>
     <div class="container">
-        <div class="filterbg">
-            <div id="filter-buttons">
-                <button data-filter="kõik"> <i class="fa-solid fa-border-all"></i> Kõik</button>
-                <button data-filter="powershell"> <i class="fa-solid fa-shrimp"></i> Powershell</button>
-                <button data-filter="markdown"> <i class="fa-brands fa-markdown"></i> Markdown</button>
-                <button data-filter="python"> <i class="fa-brands fa-python"></i> Python</button>
-                <button data-filter="bash"> <i class="fa-solid fa-terminal"></i> Bash</button>
-                <button data-filter="html"> <i class="fa-brands fa-html5"></i> HTML/CSS</button>
-                <button data-filter="võrguseadmed"> <i class="fa-solid fa-network-wired"></i> Võrguseadmed</button>
-                <button data-filter="3d"> <i class="fa-solid fa-cube"></i> 3D mudelid</button>
-            </div>
-        </div>
         <div id="gallery">
             <div class="item powershell">
                 <img src="./src/images/programming/powershell/powershell toolbox.png">
@@ -209,26 +227,40 @@
                     See oli minu neljas portfell, mille lõin täiesti nullist ise
                 </p>
             </div>
+            <div class="item html">
+                <img src="./src/images/programming/html/school.png">
+                <h1>Learning Web development</h1>
+                <p>
+                    See oli kooli tunnis õpitud HTML, mida ma nüüdseks olen hakanud iseseisvalt edasi arendama. Lisaks
+                    põhialuste omandamisele olen uurinud ka CSS-i ja JavaScripti, et muuta oma veebilehed
+                    interaktiivsemaks ja visuaalselt atraktiivsemaks.
+                </p>
+            </div>
             <div class="item võrguseadmed">
                 <img src="./src/images/ip devices/config ip cam.jpg">
                 <h1>IP camera config</h1>
                 <p>
-                    Siin on IP-kaamera, mille seadistamise õppisin Ametikoolis
+                    See IP-kaamera on tulemuslikult seadistatud tänu sellele, mida ma õppisin Ametikoolis. Ma olen
+                    omandanud põhjalikud teadmised võrguühenduse seadistamisest, IP-aadresside määramisest ja portide
+                    konfigureerimisest.
                 </p>
             </div>
             <div class="item võrguseadmed">
                 <img src="./src/images/ip devices/config ruckus ap.jpg">
                 <h1>AP config</h1>
                 <p>
-                    Siin on üks mitmest juurdepääsupunktist (AP), mille seadistamise õppisin Ametikoolis.
+                    Selle juurdepääsupunkti (AP) seadistamine on üks oskus, mille ma omandasin Ametikoolis. Ma õppisin,
+                    kuidas konfigureerida AP-d nii, et need tagaksid tõhusa ja stabiilse traadita võrguühenduse.
                 </p>
             </div>
             <div class="item võrguseadmed">
                 <img src="./src/images/ip devices/config switch rack.jpg">
                 <h1>Switch config</h1>
                 <p>
-                    Siin on switch'i kapp, milles on mitu switch'i ja muud seadet, mille seadistamise õppisin
-                    Ametikoolis. </p>
+                    See switch'i kapp on varustatud mitme switch'i ja teiste seadmetega, mille seadistamise oskuse
+                    omandasin tänu Ametikoolis saadud haridusele. Ma õppisin, kuidas seadistada ja hallata
+                    võrguseadmeid, tagades tõhusa andmeedastuse ja võrgu turvalisuse.
+                </p>
             </div>
             <div class="item võrguseadmed">
                 <img src="./src/images/ip devices/config tv.jpg">
@@ -238,42 +270,42 @@
                     teised õpilased lõpetasid ülesannet tunnis, aitasin mina õpetajat nende paigaldamisel.
                 </p>
             </div>
-            <div class="item 3d" style="height: 900px">
+            <div class="item mudel">
                 <img src="./src/images/3d/3d cube.png">
                 <h1>Cube</h1>
                 <p>
-                    Esimese poole esimesest tunnist tegin valmis 3D mudeli navigeerimise kuubist. Esialgu arvasin, et
-                    selle keskkonna kaamera/vaate liigutamine oli suhteliselt keeruline manööverdada, kuna see oli
-                    harjumatu. Üllatusin , et see osutus oodatust lihtsamaks. Hea oli selles tunnis see, et oli olemas
-                    näidis vasakul üleval ekraani nurgas. Selle tunni mõte oli õppida kuidas lisada teksti ja kuidas 3D
-                    mudelid üksteisega käituvad. Oleks saanud veel õppida lisaks, kuidas navigeerida Tinkercad
-                    keskkonnas. Kui situatsioon kordub, teeksin seda tööd kiiremini ja parema kvaliteediga.
+                    Esimese poole esimesest tunnist valmistasin 3D mudeli navigatsioonikuubikust. Algul arvasin, et
+                    kaamera/vaate liigutamine selles keskkonnas võib olla keeruline, kuna see oli mulle võõras.
+                    Üllatusin, et see osutus oodatust lihtsamaks. Hea asi selle tunni juures oli see, et ekraani vasakus
+                    ülanurgas oli näidis olemas. Selle tunni eesmärk oli õppida, kuidas lisada teksti ja kuidas 3D
+                    mudelid omavahel käituvad. Oleksin võinud õppida ka Tinkercad keskkonnas navigeerimist. Kui olukord
+                    korduks, teeksin seda ülesannet kiiremini ja parema kvaliteediga.
                 </p>
             </div>
-            <div class="item 3d" style="height: 900px">
+            <div class="item mudel">
                 <img src="./src/images/3d/3d lego.png">
                 <h1>Lego 2x4 punane klots</h1>
                 <p>
-                    Teise poole esimesest tunnis tegin valmis 3D mudeli Lego 2x4 punasest klotsist ning õppisin kasutama
-                    Tinkercad keskkonda. Arvasin, et mudeli tegemine oli üsna tüütu, kuna sellel oli palju erineva
-                    suurusega kujundeid. Hea oli selles tunnis see, et oli olemas skeem, millelt sai mõõdud võtta. Selle
-                    tunni mõte oli õppida kuidas üldiselt sarnased programmid toimivad. Oleks saanud veel õppida, kuidas
-                    kasutada Tinkercad keskkonda. Kui situatsioon kordub, teeksin seda tööd kiiremini.
+                    Teise poole esimeses tunnis valmistasin 3D mudeli Lego 2x4 punasest klotsist ning õppisin kasutama
+                    Tinkercad keskkonda. Mõtlesin, et mudeli loomine võib olla tüütu, kuna selles oli palju erineva
+                    suurusega kujundeid. Positiivne oli see, et oli olemas skeem, millelt sai mõõtmeid võtta. Selle
+                    tunni eesmärk oli õppida, kuidas üldiselt sarnased programmid toimivad. Oleksin võinud veel õppida,
+                    kuidas kasutada Tinkercad keskkonda. Kui olukord korduks, teeksin töö kiiremini.
                 </p>
             </div>
-            <div class="item 3d" style="height: 900px">
+            <div class="item mudel">
                 <img src="./src/images/3d/3d stool.png">
                 <h1> Taburett </h1>
                 <p>
-                    Kolmandas tunnis modelleerisin tabureti ning seekord kasutasin modelleerimiseks Sketchup keskkonda.
-                    Sketchup keskkonnas on modeleerimine veidi keerulisem kui Tinkercadis, kuna seal on navigeerimine
-                    teistmoodi. Hea oli see, et kui ma harjusin kuidas seda natuke kasutama, hakkas minu töö kiiremini
-                    valmima. Selle tunni mõte oli kasutada uut rakendust ning õppida selle eripärasid võrreldes
-                    Tinkercadiga. Oleks võinud selles keskkonnas rohkem tööriistu õppida ning kuidas neid kasutada
-                    praktiliselt. Kui situatsioon korduks, teeksin tööd kiiremini.
+                    Kolmandas tunnis modelleerisin tabureti, kasutades selleks Sketchup keskkonda. Märkasin, et
+                    Sketchupis on modelleerimine veidi keerulisem kui Tinkercadis, eriti navigeerimise osas. Kui sain
+                    aga selle keskkonnaga veidi harjunud, läks minu töö kiiremini edasi. Selle tunni eesmärk oli tutvuda
+                    uue rakendusega ning õppida selle eripärasid võrreldes Tinkercadiga. Oleksin võinud selles
+                    keskkonnas rohkem tööriistu õppida ja kuidas neid praktiliselt kasutada. Kui olukord korduks,
+                    teeksin tööd kiiremini.
                 </p>
             </div>
-            <div class="item 3d" style="height: 900px">
+            <div class="item mudel">
                 <img src="./src/images/3d/3d bench.png">
                 <h1>Pink</h1>
                 <p>
@@ -285,7 +317,7 @@
                     navigeerida kiiremini ja paremini.
                 </p>
             </div>
-            <div class="item 3d" style="height: 900px">
+            <div class="item mudel">
                 <img src="./src/images/3d/3d castle.png">
                 <h1>Loss</h1>
                 <p>
@@ -302,7 +334,7 @@
                     font-size: 16pt;">Video</a>
                 </p>
             </div>
-            <div class="item 3d" style="height: 1000px">
+            <div class="item mudel">
                 <img src="./src/images/3d/3d snowflake.png">
                 <h1>Lumehelbed</h1>
                 <p>
@@ -314,7 +346,7 @@
                     eelnevalt koguda ja teha enda töö paremaks.
                 </p>
             </div>
-            <div class="item 3d" style="height: 1000px">
+            <div class="item mudel">
                 <img src="./src/images/3d/3d house.png">
                 <h1>Maja</h1>
                 <p>
@@ -328,7 +360,7 @@
                     enne kui teise korrusega alustaksin.
                 </p>
             </div>
-            <div class="item 3d" style="height: 1000px">
+            <div class="item mudel">
                 <img src="./src/images/3d/3d tank.png">
                 <h1>Renault FT-17</h1>
                 <p>
