@@ -16,7 +16,6 @@
             flex-wrap: wrap;
             margin-top: 70px;
             margin-left: 1%;
-            margin-right: 1%;
             overflow: hidden;
         }
 
@@ -37,7 +36,6 @@
             padding: 20px;
             margin: 5px;
             background-color: var(--color2);
-            min-width: 300px;
             flex-grow: 1;
         }
 
@@ -45,9 +43,8 @@
 
         .mepic {
             background-color: var(--color3);
-            max-width: 500px;
             overflow: hidden;
-            width: 100%;
+            width: 30%;
             height: auto;
             /* Hide overflow */
         }
@@ -91,11 +88,9 @@
             scale: 120%;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 100px) {
             .container {
                 flex-direction: column;
-                margin-left: 1%;
-                margin-right: 1%;
             }
 
             .mepic {
@@ -113,7 +108,12 @@
             }
         }
 
-
+        html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    margin-left: 10px;
+    margin-right: 10px;
+}
 
 
 
@@ -149,6 +149,12 @@
         @media (min-width: 768px) {
             .container {
                 justify-content: space-between;
+
+            }
+
+            body {
+                margin-left: 0;
+                margin-right: 0;
             }
 
             .mepic {
