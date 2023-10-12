@@ -113,26 +113,31 @@
             .kogemused,
             .oskused {
                 width: 93%;
+                height: auto;
+
                 /* Set width to 100% to take up full width on small screens */
             }
+
             #date {
-            background-color: var(--color4);
-            border-radius: 15px;
-            padding: 5px;
-            text-align: center;
-            width: 30%;
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--textcontrast);
-            margin-right: 20px;
+                background-color: var(--color4);
+                border-radius: 15px;
+                padding: 5px;
+                text-align: center;
+                width: 30%;
+                font-size: 14px;
+                font-weight: 600;
+                color: var(--textcontrast);
+                margin-right: 20px;
+            }
         }
+
+        html,
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+            margin-left: 10px;
+            margin-right: 10px;
         }
-        html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-    margin-left: 10px;
-    margin-right: 10px;
-}
     </style>
 
 </head>
@@ -161,7 +166,8 @@
             </div>
             <div class="kool2">
                 <h2>Rakvere Ametikool</h2>
-                <h3 id="date"><i class="fa-solid fa-calendar-days"></i>&nbsp; 2021 - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <h3 id="date"><i class="fa-solid fa-calendar-days"></i>&nbsp; 2021 -
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </h3>
                 <img src="./src/images/schools/ametikool.jpg" width="80%">
 
